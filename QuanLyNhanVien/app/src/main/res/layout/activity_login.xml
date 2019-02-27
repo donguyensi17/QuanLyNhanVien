@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@drawable/login"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:orientation="vertical"
+    tools:context=".activity.LogInActivity"
+    android:gravity="center"
+    android:weightSum="10"
+    >
+    <TextView
+        android:layout_weight="3"
+        android:textStyle="bold|italic"
+        android:textColor="#5c5757"
+        android:gravity="center|bottom"
+        android:text="Đăng Nhập"
+        android:textSize="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:text="admin"
+        android:inputType="text"
+        android:textColorHint="#fafafa"
+        android:textSize="15sp"
+        android:layout_weight="1"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:textStyle="bold|italic"
+        android:hint="username:"
+        android:id="@+id/edittextuser"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+    <EditText
+        android:text="123456"
+        android:inputType="textPassword|numberPassword"
+        android:textColorHint="#fafafa"
+        android:textSize="12sp"
+        android:password="true"
+        android:layout_weight="1"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:textStyle="bold|italic"
+        android:hint="password:"
+        android:id="@+id/edittextpassword"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_weight="4"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttondangnhap"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="#5c5757"
+                android:text="Log In"
+                android:textAllCaps="false"
+                android:textColor="#fafafa"
+                android:textStyle="bold|italic" />
+
+            <Button
+                android:id="@+id/buttonthoat"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:background="#5c5757"
+                android:text="Exit"
+                android:textAllCaps="false"
+                android:textColor="#fafafa"
+                android:textStyle="bold|italic" />
+        </LinearLayout>
+        <TextView
+            android:textColor="#fafafa"
+            android:textStyle="italic"
+            android:textSize="15sp"
+            android:text="Forgot your login details? Get help signing in."
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/buttondangky"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_weight="1"
+        android:background="#5c5757"
+        android:text="Don't have an account? Sign Up."
+        android:textAllCaps="false"
+        android:textColor="#fafafa"
+        android:textSize="15sp"
+        android:textStyle="bold|italic" />
+</LinearLayout>

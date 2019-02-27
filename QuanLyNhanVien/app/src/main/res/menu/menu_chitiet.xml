@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menunhanvien"
+        android:title="Nhân Viên" />
+    <item
+        android:id="@+id/menunphongban"
+        android:title="Phòng Ban" />
+    <item
+        android:title="nuthtem"
+        android:id="@+id/menuthemnhanvien"
+        android:icon="@drawable/add"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menubando"
+        android:title="Maps" />
+    <item
+        android:id="@+id/menuthoat"
+        android:title="Thoát" />
+</menu>
