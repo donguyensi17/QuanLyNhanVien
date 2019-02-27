@@ -14,24 +14,24 @@ import com.dns.nguyensi.quanlynhanvien.R;
 
 public class LogInActivity extends AppCompatActivity {
 
-    EditText edttaikhoan, edtmatkhau;
-    Button btndangnhap, btndangky, btnthoat;
+    private EditText edt_username, edt_password;
+    private Button btn_login, btn_signin, btn_exit;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        anhxa();
+        AnhXa();
         ControlButton();
     }
 
     private void ControlButton() {
-        btnthoat.setOnClickListener(new View.OnClickListener() {
+        btn_exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(LogInActivity.this, android.R.style.Theme_DeviceDefault_Light_Dialog);
                 builder.setTitle("Bạn muốn thoát chứ?");
                 builder.setIcon(R.drawable.thoat);
-                builder.setPositiveButton("Ừm nè", new DialogInterface.OnClickListener() {
+                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         onBackPressed();
@@ -47,18 +47,11 @@ public class LogInActivity extends AppCompatActivity {
             }
         });
 
-//        btndangky.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(LoginActivity.this,SigninActivity.class);
-//                startActivity(intent);
-//            }
-//        });
-        btndangnhap.setOnClickListener(new View.OnClickListener() {
+        btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(edttaikhoan.getText().length() !=0 && edtmatkhau.getText().length() !=0){
-                    if(edttaikhoan.getText().toString().equals("admin") && edtmatkhau.getText().toString().equals("123456")){
+                if(edt_username.getText().length() !=0 && edt_password.getText().length() !=0){
+                    if(edt_username.getText().toString().equals("admin") && edt_password.getText().toString().equals("123456")){
                         Toast.makeText(LogInActivity.this,"Bạn đã đăng nhập thành công!", Toast.LENGTH_LONG).show();
                         Intent intent = new Intent(LogInActivity.this,NhanVienActivity.class);
                         startActivity(intent);
@@ -72,11 +65,11 @@ public class LogInActivity extends AppCompatActivity {
         });
     }
 
-    private void anhxa() {
-        edttaikhoan = (EditText) findViewById(R.id.edittextuser);
-        edtmatkhau = (EditText) findViewById(R.id.edittextpassword);
-        btndangnhap = (Button) findViewById(R.id.buttondangnhap);
-        btndangky = (Button) findViewById(R.id.buttondangky);
-        btnthoat = (Button) findViewById(R.id.buttonthoat);
+    private void AnhXa() {
+        edt_username = (EditText) findViewById(R.id.edittextuser);
+        edt_password = (EditText) findViewById(R.id.edittextpassword);
+        btn_login = (Button) findViewById(R.id.buttondangnhap);
+        btn_signin = (Button) findViewById(R.id.buttondangky);
+        btn_exit = (Button) findViewById(R.id.buttonthoat);
     }
 }
