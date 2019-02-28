@@ -14,8 +14,11 @@ import com.dns.nguyensi.quanlynhanvien.R;
 
 public class LogInActivity extends AppCompatActivity {
 
-    private EditText edt_username, edt_password;
-    private Button btn_login, btn_signin, btn_exit;
+    private EditText edtUserName;
+    private EditText edtPassWord;
+    private Button btnLogIn;
+    private Button btnSignIn;
+    private Button btnExit;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
