@@ -57,7 +57,7 @@ public class LogInActivity extends AppCompatActivity {
                 private static final int USER_NAME = "admin";
                 private static final int PASS_WORD = 123456;
                 if(edtUserName.getText().length() !=0 && edtPassWord.getText().length() !=0){
-                    if(edtUserName.getText().toString().equals("admin") && edtPassWord.getText().toString().equals("123456")){
+                    if(edtUserName.getText().toString().equals(USER_NAME) && edtPassWord.getText().toString().equals(PASS_WORD)){
                         Toast.makeText(LogInActivity.this,"Bạn đã đăng nhập thành công!", Toast.LENGTH_LONG).show();
                         Intent intent = new Intent(LogInActivity.this,NhanVienActivity.class);
                         startActivity(intent);
